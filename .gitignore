@@ -1,0 +1,6 @@
+# All the internet...
+node_modules/
+
+# My tweaks..
+www/main.js
+.DS_Store

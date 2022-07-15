@@ -1,0 +1,31 @@
+{
+  "name": "jsnation-2022-a11y-and-tdd",
+  "version": "0.0.1",
+  "description": "a11 and TDD: A perfect match 💜",
+  "main": "index.js",
+  "scripts": {
+    "serve": "concurrently \"npm run build\" \"npm run start\" -n 'esbuild,browser' -c 'yellow.bold,blue.bold' ",
+    "build": "esbuild --bundle src/index.js --outfile=www/main.js",
+    "start": "npm run build -- --servedir=www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritamcastro/jsnation-2022-a11y-and-tdd.git"
+  },
+  "keywords": [
+    "a11y",
+    "tdd",
+    "javascript",
+    "jsnation"
+  ],
+  "author": "Rita Castro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ritamcastro/jsnation-2022-a11y-and-tdd/issues"
+  },
+  "homepage": "https://github.com/ritamcastro/jsnation-2022-a11y-and-tdd#readme",
+  "devDependencies": {
+    "concurrently": "^7.2.2",
+    "esbuild": "^0.14.42"
+  }
+}
