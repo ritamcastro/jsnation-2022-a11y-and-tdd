@@ -4,9 +4,12 @@
   "description": "a11 and TDD: A perfect match 💜",
   "main": "index.js",
   "scripts": {
-    "serve": "concurrently \"npm run build\" \"npm run start\" -n 'esbuild,browser' -c 'yellow.bold,blue.bold' ",
+    "serve": "concurrently \"npm run watch\" \"npm run start\" -n 'esbuild,browser' -c 'yellow.bold,blue.bold' ",
     "build": "esbuild --bundle src/index.js --outfile=www/main.js",
-    "start": "npm run build -- --servedir=www"
+    "watch": "npm run build -- --watch",
+    "start": "npm run build -- --servedir=www",
+    "test": "jest src",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -25,7 +28,16 @@
   },
   "homepage": "https://github.com/ritamcastro/jsnation-2022-a11y-and-tdd#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "@testing-library/dom": "^8.13.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/user-event": "^14.2.0",
     "concurrently": "^7.2.2",
-    "esbuild": "^0.14.42"
+    "esbuild": "^0.14.42",
+    "eslint": "^8.17.0",
+    "eslint-plugin-jest": "^26.4.6",
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
+    "jest-watch-typeahead": "^1.1.0"
   }
 }
