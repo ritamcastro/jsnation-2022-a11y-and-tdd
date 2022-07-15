@@ -29,9 +29,6 @@
   "homepage": "https://github.com/ritamcastro/jsnation-2022-a11y-and-tdd#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.2",
-    "@testing-library/dom": "^8.13.0",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/user-event": "^14.2.0",
     "concurrently": "^7.2.2",
     "esbuild": "^0.14.42",
     "eslint": "^8.17.0",
