@@ -1,12 +1,13 @@
 class TextInput extends HTMLElement {
     constructor() {
         super()
+        this.value = this.getAttribute("value")
     }
 
     connectedCallback() {
         this.innerHTML = `
-            <p>Hi, welcome</p>
-            <input/>
+            <p>${this.title}</p>
+            <input value=${this.value}></input>
         `
     }
 }
