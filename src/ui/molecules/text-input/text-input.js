@@ -1,14 +1,19 @@
 class TextInput extends HTMLElement {
+
     constructor() {
         super()
         this.value = this.getAttribute("value")
+        this.labelText = this.getAttribute("labelText")
+        this.name = this.getAttribute("name")
     }
 
     connectedCallback() {
         this.innerHTML = `
-            <p>${this.title}</p>
-            <input value=${this.value}></input>
-        `
+          <label for="${this.name}">
+            ${this.labelText}
+          </label>
+          <input id="${this.name}" name="${this.name}" value=${this.value}></input>
+       `
     }
 }
 
