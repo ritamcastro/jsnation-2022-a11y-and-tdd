@@ -1,14 +1,14 @@
+import { screen } from "@testing-library/dom"
+import userEvent from "@testing-library/user-event"
 import "./form"
 
 describe("form organism", () => {
     it("asks for first name and last name", () => {
-        document.body.innerHTML = `<jsnation-form></jsnation-form>`
+        document.body.innerHTML = "<jsnation-form></jsnation-form>"
 
-        expect(document.body.querySelectorAll("p")[0]).toHaveTextContent("First Name")
-        expect(document.body.querySelectorAll("p")[1]).toHaveTextContent("Last Name")
+        expect(screen.getByText("Last Name")).toBeInTheDocument()
+        expect(screen.getByText("First Name")).toBeInTheDocument()
 
-        expect(document.body.querySelector("button")).toHaveTextContent("Send it to Lera!")
+        expect(screen.getByRole("button", { name: "Send it to Lera!" })).toBeInTheDocument()
     })
-
-
 })
