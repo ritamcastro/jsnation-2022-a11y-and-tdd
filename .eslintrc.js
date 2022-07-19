@@ -9,7 +9,10 @@ module.exports = {
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["jest"],
+  "plugins": [
+    "jest",
+    "testing-library"
+  ],
   "rules": {
     "indent": [
       "error",
@@ -26,6 +29,10 @@ module.exports = {
     "semi": [
       "error",
       "never"
-    ]
+    ],
+    "testing-library/await-async-query": "error",
+    "testing-library/no-await-sync-query": "error",
+    "testing-library/no-debugging-utils": "warn",
+    "testing-library/no-dom-import": "off"
   }
 }
