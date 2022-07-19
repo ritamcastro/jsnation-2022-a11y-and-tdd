@@ -8,10 +8,13 @@ class JsNationForm extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-            <text-input title="First Name"></text-input>
-            <text-input title="Last Name"></text-input>
+        <form aria-label="JS Nation asks stuff form">
 
-            <button>Send it to Lera!</button>
+            <text-input labelText="Enter your name:" name="firstName" value=""></text-input>
+            <text-input labelText="Enter your surname:" name="lastName" value=""></text-input>
+
+            <input type="submit" value="Send it to Lera!" />
+        </form>
         `
     }
 }
