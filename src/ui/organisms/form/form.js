@@ -1,4 +1,4 @@
-import "../../molecules/text-input/text-input"
+import "../personal-details/personal-details"
 
 class JsNationForm extends HTMLElement {
 
@@ -10,8 +10,7 @@ class JsNationForm extends HTMLElement {
         this.innerHTML = `
         <form aria-label="JS Nation asks stuff form">
 
-            <text-input labelText="Enter your name:" name="firstName" value=""></text-input>
-            <text-input labelText="Enter your surname:" name="lastName" value=""></text-input>
+            <personal-details></personal-details>
 
             <input type="submit" value="Send it to Lera!" />
         </form>
