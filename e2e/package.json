@@ -1,0 +1,31 @@
+{
+  "name": "2e2",
+  "version": "0.0.1",
+  "description": "a11 and TDD: A perfect match 💜 from an End to End testing perspective",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open --e2e --browser electron"
+  },
+  "keywords": [
+    "a11y",
+    "tdd",
+    "e2e",
+    "cypress",
+    "frontend-testing",
+    "javascript",
+    "jsnation"
+  ],
+  "contributors": [
+    "Rita Castro",
+    "Wilson Mália"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ritamcastro/jsnation-2022-a11y-and-tdd/issues"
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^8.0.3",
+    "cypress": "^10.1.0",
+    "cypress-plugin-tab": "^1.0.5"
+  }
+}
