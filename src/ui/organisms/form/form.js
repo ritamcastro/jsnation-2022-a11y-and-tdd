@@ -1,4 +1,6 @@
 import "../personal-details/personal-details"
+import "../rs-quiz/rs-quiz"
+import "../hangout-day-quiz/hangout-day-quiz"
 
 class JsNationForm extends HTMLElement {
 
@@ -11,6 +13,8 @@ class JsNationForm extends HTMLElement {
         <form aria-label="JS Nation asks stuff form">
 
             <personal-details></personal-details>
+            <rs-quiz></rs-quiz>
+            <hangout-day-quiz></hangout-day-quiz>
 
             <input type="submit" value="Send it to Lera!" />
         </form>
@@ -38,6 +42,7 @@ class JsNationForm extends HTMLElement {
                 lastName: formData.get("lastName"),
             }
 
+            window.alert()
             this.dispatchEvent(
                 new CustomEvent("onSubmit", { detail: { personalData } }),
             )
